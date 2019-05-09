@@ -8,7 +8,7 @@ OLD_FILE = 'index.android.bundle'
 # 新版本文件
 NEW_FILE = 'index.android.bundle_2'
 
-# 补丁文件
+# 生成的补丁文件
 PATCH_FILE = '_patch'
 
 
@@ -18,7 +18,9 @@ def create_pat_file(f1, f2):
     f2_text = read_file(f2)
 
     dmp = dmp_module.diff_match_patch()
+    # 生成差异对象
     diff = dmp.diff_main(f1_text, f2_text)
+    # 将差异对象转化成字符串，写入补丁文件中
     patches = dmp.patch_toText(dmp.patch_make(diff))
     write_file(PATCH_FILE, patches)
     print(PATCH_FILE + ' file created')
