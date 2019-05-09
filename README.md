@@ -3,4 +3,4 @@
 
 用到的工具: [diff-match-patch](https://github.com/google/diff-match-patch)
 
-补丁生成脚本: patch_diff.py
+补丁生成脚本: [patch_diff.py](https://github.com/xionghaoo/PatchCreator/blob/master/patch_diff.py)
